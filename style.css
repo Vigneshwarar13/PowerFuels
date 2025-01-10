@@ -37,6 +37,7 @@ header nav ul li a:hover {
     color: #f1c40f;
 }
 
+/* Banner Section */
 .banner {
     background: url('img/banner.jpg') no-repeat center center/cover;
     color: white;
@@ -67,6 +68,7 @@ header nav ul li a:hover {
     background-color: #e67e22;
 }
 
+/* Featured Products Section */
 .featured-products {
     padding: 50px 10%;
     color: white;
@@ -128,6 +130,7 @@ header nav ul li a:hover {
     background-color: #2ecc71;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -151,5 +154,42 @@ footer {
 
     .product-card {
         width: 100%;
+    }
+
+    /* Mobile Navigation Styles */
+    header nav ul {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Toggle Button for Mobile */
+    header .nav-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 2em;
+        color: white;
+    }
+
+    header nav ul.active {
+        display: flex; /* Show the navigation when active */
+    }
+
+    /* Hamburger Menu Styles */
+    header nav ul li a {
+        font-size: 1.5em;
+    }
+}
+
+/* Desktop Navigation (default) */
+@media (min-width: 769px) {
+    header nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    header .nav-toggle {
+        display: none; /* Hide the mobile toggle button on desktop */
     }
 }

@@ -37,6 +37,7 @@ header nav ul li a:hover {
     color: #f1c40f;
 }
 
+/* Contact Section */
 .contact-section {
     padding: 50px 10%;
     text-align: center;
@@ -98,4 +99,61 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust padding for mobile */
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .contact-section p {
+        font-size: 1.1em;
+    }
+
+    /* Adjust button sizes for mobile */
+    .contact-section .whatsapp-link {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    .contact-form button {
+        font-size: 1.3em;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Desktop and larger screen adjustments */
+    .contact-section {
+        padding: 50px 10%;
+    }
+
+    .contact-section h2 {
+        font-size: 2.5em;
+    }
+
+    .contact-section p {
+        font-size: 1.2em;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .contact-form button {
+        font-size: 1.5em;
+        padding: 15px;
+    }
 }
