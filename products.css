@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Mass and Whey Links */
+.mass-whey-links {
+    display: flex;
+    gap: 10px;
+}
+
+.mass-whey-links .button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.mass-whey-links .button:hover {
+    background-color: #2980b9;
+}
+
+/* Products Section */
+.products {
+    padding: 50px 10%;
+}
+
+.products h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.4em;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.product-card .weight,
+.product-card .rating {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.product-card .about {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.product-card .contact-button {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #27ae60;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-card .contact-button:hover {
+    background-color: #2ecc71;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products {
+        padding: 50px 5%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .mass-whey-links {
+        top: 10px;
+        right: 10px;
+    }
+}
