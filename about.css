@@ -113,4 +113,16 @@ footer {
         font-size: 1.2em;
     }
 
-    header .logo h
+    header .logo h1 {
+        font-size: 2.5em;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
