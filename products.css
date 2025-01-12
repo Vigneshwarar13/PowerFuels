@@ -1,211 +1,291 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+body {
+    background-image: url('./Images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Header Styles */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
 }
 
 header .logo h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+header .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;  /* Set the hamburger bars to white */
+    margin: 5px 0;
 }
 
 header nav ul {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-header nav ul li a:hover {
-    color: #f1c40f;
-}
-
-/* Mass and Whey Links */
-.mass-whey-links {
+header .mass-whey-links {
     display: flex;
     gap: 10px;
 }
 
-.mass-whey-links .button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 20px;
+header .mass-whey-links .button {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    font-size: 1.2em;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.mass-whey-links .button:hover {
-    background-color: #2980b9;
+header .mass-whey-links .button:hover {
+    background-color: #ff4500;
 }
 
 /* Products Section */
 .products {
-    padding: 50px 10%;
+    padding: 40px 20px;
 }
 
 .products h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    margin-top: 20px;
 }
 
 .product-card {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .product-card h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .product-card .price {
-    font-size: 1.4em;
-    color: #27ae60;
-    margin-bottom: 10px;
-}
-
-.product-card .weight,
-.product-card .rating {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
+.product-card .weight {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.product-card .rating {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
 .product-card .about {
-    font-size: 1em;
-    margin-bottom: 15px;
-    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
 .product-card .contact-button {
-    text-decoration: none;
-    font-size: 1.2em;
+    background-color: #ff7f50;
     color: #fff;
-    background-color: #27ae60;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
 .product-card .contact-button:hover {
-    background-color: #2ecc71;
+    background-color: #ff4500;
 }
 
-/* Footer */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     text-align: center;
-    padding: 5px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
-/* Responsive Design */
+footer .footer-content p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #ff7f50;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    /* General adjustments for mobile view */
-    .products {
-        padding: 50px 5%;
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo h1 {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header .mass-whey-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    header .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .products h2 {
+        font-size: 2rem;
     }
 
     .product-grid {
-        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-card .price {
+        font-size: 1rem;
+    }
+
+    .product-card .weight,
+    .product-card .rating {
+        font-size: 0.9rem;
+    }
+
+    .product-card .about {
+        font-size: 0.9rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+
+    footer .social-links a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 
     .product-card {
-        width: 100%; /* Ensure product cards take full width */
+        padding: 15px;
     }
 
-    /* Mass and Whey Links */
-    .mass-whey-links {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        gap: 10px;
-        z-index: 10;
+    .product-card h3 {
+        font-size: 1.1rem;
     }
 
-    /* Make the buttons slightly smaller for mobile */
-    .mass-whey-links .button {
-        font-size: 1em;
-        padding: 10px 18px;
+    .product-card .price {
+        font-size: 0.9rem;
     }
 
-    /* Adjust header navigation */
-    header nav ul {
-        display: none; /* Hide nav links by default */
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        padding: 20px 0;
+    .product-card .weight,
+    .product-card .rating {
+        font-size: 0.8rem;
     }
 
-    header .nav-toggle {
-        display: block;
-        font-size: 2em;
-        color: white;
-        cursor: pointer;
+    .product-card .about {
+        font-size: 0.8rem;
     }
 
-    header nav ul.active {
-        display: flex; /* Show nav links when active */
+    .footer-content p {
+        font-size: 0.8rem;
     }
 
-    header nav ul li a {
-        font-size: 1.5em;
+    footer .social-links a {
+        font-size: 1rem;
     }
 }
 
-/* Desktop Navigation (default) */
-@media (min-width: 769px) {
-    header nav ul {
-        display: flex;
-        gap: 20px;
-    }
-
-    header .nav-toggle {
-        display: none; /* Hide the mobile toggle button on desktop */
-    }
+/* Show the nav when hamburger is clicked */
+nav.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
+

@@ -14,6 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 header .logo h1 {
@@ -35,6 +36,22 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #f1c40f;
+}
+
+/* Hamburger Menu */
+header .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
 }
 
 /* Contact Section */
@@ -65,6 +82,11 @@ header nav ul li a:hover {
 
 .contact-section .whatsapp-link:hover {
     background-color: #128C7E;
+}
+
+/* Added margin for spacing between WhatsApp link and form */
+.form-container {
+    margin-top: 30px;
 }
 
 .contact-form input, .contact-form textarea {
@@ -131,6 +153,22 @@ footer {
         font-size: 1.3em;
         padding: 12px;
     }
+
+    /* Hamburger Menu */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header .hamburger-menu {
+        display: block;
+    }
+
+    header nav.active ul {
+        display: flex;
+    }
 }
 
 @media (min-width: 769px) {
@@ -155,5 +193,10 @@ footer {
     .contact-form button {
         font-size: 1.5em;
         padding: 15px;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 20px;
     }
 }

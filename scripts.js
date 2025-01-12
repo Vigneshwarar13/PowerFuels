@@ -1,7 +1,5 @@
-// JavaScript for mobile navigation toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('header nav ul');
-
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+// script.js
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
 });

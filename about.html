@@ -12,8 +12,13 @@
     <div class="logo">
         <h1>PowerFuels</h1>
     </div>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
     <nav>
-        <ul>
+        <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -24,11 +29,23 @@
 <section class="about-section">
     <h2>About PowerFuels</h2>
     <p>PowerFuels is your trusted online store for high-quality supplements. We offer a wide range of whey proteins, mass gainers, and other supplements to help you achieve your fitness goals. We believe in providing the best products at competitive prices with exceptional customer service.</p>
+    <p>Our mission is to provide fitness enthusiasts with the best possible products to fuel their workouts and support their health. Whether you're a bodybuilder, athlete, or just someone looking to improve your fitness, we have the right supplement for you. Our products are carefully sourced and tested to ensure quality and effectiveness.</p>
+    <p>At PowerFuels, we are committed to helping our customers achieve their fitness goals by offering a variety of high-quality, affordable supplements. We also provide expert advice and guidance to help you make informed decisions about the supplements you use. Our goal is to be your trusted partner in fitness and health.</p>
 </section>
 
 <footer>
     <p>&copy; 2025 PowerFuels. All Rights Reserved.</p>
 </footer>
 
+<script>
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>
+
