@@ -132,13 +132,26 @@ header nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 5px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-align: center;
+}
+
+footer .footer-content p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #ff7f50;
 }
 
 /* Hamburger Menu Styles */
