@@ -42,7 +42,7 @@ header nav ul li a:hover {
 /* Banner Section */
 .banner {
     background: url('./img/banner.jpg') no-repeat center center/cover;
-    color: white;
+    color: rgb(255, 174, 0);
     text-align: center;
     padding: 100px 20px;
 }
