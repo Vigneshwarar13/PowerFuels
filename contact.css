@@ -10,28 +10,42 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo .logo-img {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
 header .logo h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 1.8em;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
 header nav ul li a:hover {
@@ -62,7 +76,7 @@ header .hamburger-menu .bar {
 
 .contact-section h2 {
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .contact-section p {
@@ -73,74 +87,124 @@ header .hamburger-menu .bar {
 .contact-section .whatsapp-link {
     background-color: #25D366;
     color: white;
-    padding: 15px 30px;
-    font-size: 1.5em;
+    padding: 12px 25px;
+    font-size: 1.2em;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
     margin-bottom: 30px;
+    transition: background-color 0.3s;
 }
 
 .contact-section .whatsapp-link:hover {
     background-color: #128C7E;
 }
 
-/* Added margin for spacing between WhatsApp link and form */
-.form-container {
-    margin-top: 30px;
+/* Social Links */
+.contact-section .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-section .social-links .social-icon {
+    height: 24px; /* Adjust social icon size */
+    width: auto;
+    transition: opacity 0.3s;
+}
+
+.contact-section .social-links .social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     margin-bottom: 15px;
-    border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 1.2em;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
 }
 
 .contact-form button {
     width: 100%;
-    padding: 15px;
-    font-size: 1.5em;
+    padding: 12px;
     background-color: #27ae60;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 1.2em;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
     background-color: #2ecc71;
 }
 
+/* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px;
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 15px;
+    margin-top: 30px;
 }
 
-footer .footer-content p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-footer .social-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #ff7f50;
+footer p {
+    margin: 0;
+    font-size: 1em;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Adjust padding for mobile */
+    header {
+        flex-wrap: wrap;
+    }
+
+    header .logo h1 {
+        font-size: 1.5em;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    header nav.active ul {
+        display: flex;
+    }
+
+    header .hamburger-menu {
+        display: block;
+    }
+
     .contact-section {
-        padding: 50px 5%;
+        padding: 30px 5%;
     }
 
     .contact-section h2 {
@@ -148,68 +212,24 @@ footer .social-links a:hover {
     }
 
     .contact-section p {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
-    /* Adjust button sizes for mobile */
     .contact-section .whatsapp-link {
-        font-size: 1.2em;
-        padding: 12px 25px;
+        font-size: 1em;
+        padding: 10px 20px;
     }
 
-    .contact-form input, .contact-form textarea {
-        font-size: 1.1em;
-        padding: 12px;
-    }
-
-    .contact-form button {
-        font-size: 1.3em;
-        padding: 12px;
-    }
-
-    /* Hamburger Menu */
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    header .hamburger-menu {
-        display: block;
-    }
-
-    header nav.active ul {
-        display: flex;
-    }
-}
-
-@media (min-width: 769px) {
-    /* Desktop and larger screen adjustments */
-    .contact-section {
-        padding: 50px 10%;
-    }
-
-    .contact-section h2 {
-        font-size: 2.5em;
-    }
-
-    .contact-section p {
-        font-size: 1.2em;
-    }
-
-    .contact-form input, .contact-form textarea {
-        font-size: 1.2em;
+    .form-container {
         padding: 15px;
     }
 
-    .contact-form button {
-        font-size: 1.5em;
-        padding: 15px;
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9em;
     }
 
-    header nav ul {
-        display: flex;
-        gap: 20px;
+    .contact-form button {
+        font-size: 1em;
     }
 }

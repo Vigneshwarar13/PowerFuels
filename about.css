@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000000;
-    color: #333;
+    color: #000000;
 }
 
 header {
@@ -17,9 +17,20 @@ header {
     position: relative;
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo .logo-img {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
 header .logo h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 1.8em;
 }
 
 header nav ul {
@@ -68,7 +79,26 @@ header .hamburger-menu .bar {
 .about-section p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #555;
+    color: #ffffff;
+}
+
+/* Social Links */
+.about-section .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.about-section .social-links .social-icon {
+    height: 24px; /* Adjust social icon size */
+    width: auto;
+    transition: opacity 0.3s;
+}
+
+.about-section .social-links .social-icon:hover {
+    opacity: 0.8;
 }
 
 /* Footer */

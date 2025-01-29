@@ -25,11 +25,21 @@ header {
     position: relative;
 }
 
-header .logo h1 {
-    font-size: 2rem;
-    color: #fff;
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+header .logo .logo-img {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
 header .hamburger-menu {
     display: none;
     cursor: pointer;
