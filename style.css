@@ -13,6 +13,7 @@ header {
     padding: 15px;
     background: #222;
     color: white;
+    position: relative;
 }
 
 .logo {
@@ -152,3 +153,58 @@ footer a {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
